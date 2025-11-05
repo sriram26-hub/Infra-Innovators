@@ -1,24 +1,23 @@
-/* ===== GENERAL STYLES ===== */
+/* === Global === */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  background-color: #0e0e0e;
   color: #e0e0e0;
   line-height: 1.6;
 }
 
-/* ===== NAVBAR ===== */
+/* === Navbar === */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(20, 20, 20, 0.6);
-  backdrop-filter: blur(12px);
+  background-color: #1f1f1f;
   padding: 15px 50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .logo {
@@ -53,6 +52,7 @@ body {
   color: #00bcd4;
 }
 
+/* Login Button */
 .login-btn {
   background: #00bcd4;
   color: #fff !important;
@@ -65,47 +65,76 @@ body {
   background: #0097a7;
 }
 
-/* ===== HERO SECTION ===== */
+/* === Hero Section === */
 .hero {
-  background: linear-gradient(120deg, #212121, #424242);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
   position: relative;
-  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  padding: 120px 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #2a2a2a;
 }
 
-.hero-content h1 {
-  font-size: 2.5em;
+/* Background image with blur and overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url("https://cdn.pixabay.com/photo/2017/06/29/01/02/laptop-2452808_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.8em;
   margin-bottom: 10px;
+  color: #00bcd4;
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.1em;
-  opacity: 0.85;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* ===== JOB CARDS ===== */
+
+/* === Jobs Section === */
 .jobs-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
+  gap: 30px;
   padding: 60px 80px;
 }
 
 .job-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #1f1f1f;
   border-radius: 15px;
-  padding: 25px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  padding: 25px;
 }
 
 .job-card:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  background: #242424;
 }
 
 .job-card h3 {
@@ -113,17 +142,23 @@ body {
   color: #00bcd4;
 }
 
-.job-card .details {
-  color: #aaa;
-  margin-bottom: 10px;
+.details {
+  color: #bbb;
   font-size: 0.95em;
+  margin-bottom: 15px;
 }
 
-.job-card .details i {
+.details i {
   color: #00bcd4;
   margin-right: 6px;
 }
 
+.job-card p {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+/* === Buttons === */
 .btn {
   background: #00bcd4;
   color: white;
@@ -139,14 +174,13 @@ body {
   transform: scale(1.05);
 }
 
-/* ===== FOOTER ===== */
+/* === Footer === */
 footer {
-  background: rgba(20, 20, 20, 0.7);
-  backdrop-filter: blur(10px);
-  color: #bbb;
+  background: #1f1f1f;
+  color: #aaa;
   text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
+  padding: 15px 0;
   margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  border-top: 1px solid #2a2a2a;
 }

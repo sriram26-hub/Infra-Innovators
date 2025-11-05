@@ -1,22 +1,537 @@
 <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Alumni Management System - Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+
+
+  <style>
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      font-family: "Poppins", sans-serif;
+
+    }
+
+
+
+    body {
+
+      display: flex;
+
+      height: 100vh;
+
+      width: 100%;
+
+      overflow: hidden;
+
+    }
+
+
+
+    /* Left Half - Image Section */
+
+    .left-section {
+
+      width: 50%;
+
+      background: url("https://viskotukopi.wordpress.com/wp-content/uploads/2021/06/master-review-13012021m2.jpg?w=1024")
+
+        no-repeat center center/cover;
+
+    }
+
+
+
+    /* Right Half - White Login Section */
+
+    .right-section {
+
+      width: 50%;
+
+      background-color: #ffffff;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+
+
+    /* Login Box */
+
+    .login-container {
+
+      width: 80%;
+
+      max-width: 400px;
+
+      background: #fff;
+
+      border-radius: 15px;
+
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+
+      padding: 40px 35px;
+
+    }
+
+
+
+    .login-container h2 {
+
+      text-align: center;
+
+      color: #222;
+
+      font-weight: 600;
+
+      margin-bottom: 25px;
+
+      font-size: 28px;
+
+    }
+
+
+
+    .input-box {
+
+      margin-bottom: 20px;
+
+      position: relative;
+
+    }
+
+
+
+    .input-box input {
+
+      width: 100%;
+
+      padding: 12px 14px;
+
+      border-radius: 10px;
+
+      border: 1px solid #ccc;
+
+      outline: none;
+
+      font-size: 15px;
+
+      color: #333;
+
+      transition: all 0.3s ease;
+
+      background: rgba(255,255,255,0.9);
+
+    }
+
+
+
+    .input-box input:focus {
+
+      border-color: #007bff;
+
+      box-shadow: 0 0 8px rgba(0,123,255,0.3);
+
+    }
+
+
+
+    .options {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      font-size: 14px;
+
+      color: #555;
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    .options label {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 5px;
+
+    }
+
+
+
+    .options a {
+
+      color: #007bff;
+
+      text-decoration: none;
+
+    }
+
+
+
+    .options a:hover {
+
+      text-decoration: underline;
+
+    }
+
+
+
+    .login-btn {
+
+      width: 100%;
+
+      padding: 12px;
+
+      background: #007bff;
+
+      border: none;
+
+      border-radius: 10px;
+
+      color: #fff;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+      font-weight: 600;
+
+      transition: 0.3s;
+
+    }
+
+
+
+    .login-btn:hover {
+
+      background: #0056d6;
+
+    }
+
+
+
+    .register-link {
+
+      text-align: center;
+
+      margin-top: 15px;
+
+      color: #555;
+
+      font-size: 14px;
+
+    }
+
+
+
+    .register-link a {
+
+      color: #007bff;
+
+      text-decoration: none;
+
+    }
+
+
+
+    .register-link a:hover {
+
+      text-decoration: underline;
+
+    }
+
+
+
+    @media (max-width: 900px) {
+
+      body {
+
+        flex-direction: column;
+
+      }
+
+      .left-section, .right-section {
+
+        width: 100%;
+
+        height: 50%;
+
+      }
+
+      .login-container {
+
+        width: 90%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <div class="left-section"></div>
+
+
+
+  <div class="right-section">
+
+    <div class="login-container">
+
+      <h2>Login</h2>
+
+
+
+      <div class="input-box">
+
+        <input type="text" placeholder="Username" required>
+
+      </div>
+
+      <div class="input-box">
+
+        <input type="password" placeholder="Password" required>
+
+      </div>
+
+
+
+      <div class="options">
+
+        <label><input type="checkbox"> Remember me</label>
+
+        <a href="#">Forgot password?</a>
+
+      </div>
+
+
+
+      <button class="login-btn">Login</button>
+
+
+
+      <div class="register-link">
+
+        New user? <a href="register.html">Register here</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Alumni Management System - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Left Half - Image Section */
+    .left-section {
+      width: 50%;
+      background: url("https://viskotukopi.wordpress.com/wp-content/uploads/2021/06/master-review-13012021m2.jpg?w=1024")
+        no-repeat center center/cover;
+    }
+
+    /* Right Half - White Login Section */
+    .right-section {
+      width: 50%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Login Box */
+    .login-container {
+      width: 80%;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      padding: 40px 35px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #222;
+      font-weight: 600;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .input-box {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 15px;
+      color: #333;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .input-box input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0,123,255,0.3);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .options a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .options a:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background: #0056d6;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .left-section, .right-section {
+        width: 100%;
+        height: 50%;
+      }
+      .login-container {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="left-section"></div>
 
-  <div class="login-container">
-    <h2>Login to AlumniConnect</h2>
-    <form>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don’t have an account? <a href="register.html">Register</a></p>
+  <div class="right-section">
+    <div class="login-container">
+      <h2>Login</h2>
+
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button class="login-btn">Login</button>
+
+      <div class="register-link">
+        New user? <a href="register.html">Register here</a>
+      </div>
+    </div>
   </div>
-
 </body>
 </html>
