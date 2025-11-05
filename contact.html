@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlumniConnect — Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* --- Left side background section --- */
+    .left-section {
+      flex: 1;
+      background: url("https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      position: relative;
+    }
+
+    .left-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .left-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+    }
+
+    .left-text h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .left-text p {
+      font-size: 1rem;
+      color: #ddd;
+      max-width: 350px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* --- Right side form --- */
+    .right-section {
+      flex: 1;
+      background: linear-gradient(145deg, #0b0b0c, #101820);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(0, 123, 255, 0.25);
+      padding: 45px 40px;
+      width: 420px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #00b4ff;
+    }
+
+    .contact-box p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .input-field {
+      margin-bottom: 18px;
+    }
+
+    .input-field input,
+    .input-field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: #fff;
+      outline: none;
+      transition: 0.3s;
+      resize: none;
+    }
+
+    .input-field input:focus,
+    .input-field textarea:focus {
+      border-color: #00b4ff;
+      box-shadow: 0 0 10px #00b4ff44;
+    }
+
+    .send-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #007bff, #00b4ff);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .send-btn:hover {
+      background: linear-gradient(135deg, #00b4ff, #007bff);
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #00b4ff55;
+    }
+
+    /* --- Social links --- */
+    .social-links {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-links a {
+      color: #00b4ff;
+      font-size: 22px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .left-section {
+        display: none;
+      }
+      .right-section {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="left-section">
+    <div class="left-text">
+      <h1>Connect</h1>
+      <h1>Collaborate</h1>
+      <h1>Create</h1>
+    </div>
+  </div>
+
+  <div class="right-section">
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <p></p>
+
+      <form>
+        <div class="input-field">
+          <input type="text" placeholder="Full Name" required>
+        </div>
+        <div class="input-field">
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-field">
+          <input type="text" placeholder="Subject" required>
+        </div>
+        <div class="input-field">
+          <textarea rows="4" placeholder="Your Message..." required></textarea>
+        </div>
+
+        <button class="send-btn">Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <a href="mailto:admin@kgisl.edu" title="Email">&#9993;</a>
+        <a href="https://linkedin.com" title="LinkedIn">&#128101;</a>
+        <a href="https://instagram.com" title="Instagram">&#128247;</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,419 @@
+/* === GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #000000, #222222);
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+  text-shadow: 0 0 10px #888;
+}
+
+.login-btn {
+  background: #444;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.login-btn:hover {
+  background: #666;
+}
+
+/* === HERO SECTION === */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+  padding-right: 40px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ccc, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.hero-buttons .btn:hover {
+  background: #555;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #777;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* === QUICK LINKS === */
+.quick-links {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.quick-links h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.link-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  width: 260px;
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* === ALUMNI DIRECTORY === */
+.alumni-section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.alumni-section h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.alumni-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
+}
+
+.alumni-card:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.alumni-card img {
+  width: 100%;
+  height: 250px;  
+  object-fit: cover; 
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.card-buttons button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-buttons button:hover {
+  background: #555;
+}
+
+/* === EVENTS === */
+.events-section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.events-section h2 {
+  margin-bottom: 30px;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 25px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.event-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* === JOBS === */
+.jobs-section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.job-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.job-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.job-card button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.job-card button:hover {
+  background: #555;
+}
+
+/* === CONTACT === */
+.contact-section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.contact-form button {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #666;
+}
+
+/* === LOGIN === */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 25px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.login-container button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background: #555;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #121212;
+  color: #eee;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00bcd4;
+}
+
+.login-btn {
+  background: #00bcd4;
+  color: #fff !important;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #0097a7;
+}
+
